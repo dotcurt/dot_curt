@@ -23,7 +23,7 @@ The differences from "just use JSON":
 The core is frozen. New capability means a named extension in the registry, never a spec edit.
 
 Site: https://dotcurt.org
-Code: https://github.com/JordanNewell/dot_curt
+Code: https://github.com/dotcurt/dot_curt
 npm: https://www.npmjs.com/package/curt-format
 
 ## First comment (author follow-up, HN convention)

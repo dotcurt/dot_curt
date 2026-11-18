@@ -8,7 +8,7 @@ description: "Hermes agent state.db (SQLite) -> .curt, and .curt -> Claude Code 
 
 A two-direction bridge between the **Hermes** agent store (an SQLite `state.db`) and **.curt** — plus an emitter that writes **Claude Code session JSONL**, which Hermes imports natively.
 
-- **Repo:** [github.com/JordanNewell/curt-hermes](https://github.com/JordanNewell/curt-hermes)
+- **Repo:** [github.com/dotcurt/curt-hermes](https://github.com/dotcurt/curt-hermes)
 - **npm:** [`curt-hermes@1.0.0`](https://www.npmjs.com/package/curt-hermes) (MIT)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — parsing and validation come from the reference; every converted file

@@ -8,7 +8,7 @@ description: "OpenClaw gateway session transcripts -> .curt — npm curt-opencla
 
 Converts **OpenClaw** gateway session transcripts (the file-based store) to **.curt** single-file conversation files.
 
-- **Repo:** [github.com/JordanNewell/curt-openclaw](https://github.com/JordanNewell/curt-openclaw)
+- **Repo:** [github.com/dotcurt/curt-openclaw](https://github.com/dotcurt/curt-openclaw)
 - **npm:** [`curt-openclaw@1.0.0`](https://www.npmjs.com/package/curt-openclaw) (MIT)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — parsing and validation come from the reference; every converted file

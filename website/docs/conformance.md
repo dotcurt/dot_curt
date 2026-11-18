@@ -9,7 +9,7 @@ description: "The L1–L4 conformance ladder, the executable vectors, and how to
 
 "Supports .curt" is a testable claim, not an adjective. An implementation
 claims a level by passing its vectors; the vectors are plain JSON in
-[`conformance/vectors/`](https://github.com/JordanNewell/dot_curt/blob/main/conformance/vectors)
+[`conformance/vectors/`](https://github.com/dotcurt/dot_curt/blob/main/conformance/vectors)
 and the reference implementation executes them in CI. If your parser accepts
 what the vectors accept and rejects what they reject, you match the level.
 
@@ -44,7 +44,7 @@ WildChat-1M run that exercises the L3 naming convention end to end
 
 1. Run your implementation against the vectors.
 2. Update your row in
-   [`capabilities.json`](https://github.com/JordanNewell/dot_curt/blob/main/capabilities.json):
+   [`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json):
    `conformanceLevel` (for example `"L1"`, `"L1+L2"`), `extensions` (names
    you emit/accept), and `evidenceDate`.
 3. Link the run (a CI job or script) from your repo.

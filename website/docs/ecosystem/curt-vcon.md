@@ -10,7 +10,7 @@ A bridge converter between two conversation containers: **.curt** (the
 open single-file AI-conversation format) and **vCon** (the IETF
 Virtualized Conversation container, draft-ietf-vcon-vcon-core-05).
 
-- **Repo:** [github.com/JordanNewell/curt-vcon](https://github.com/JordanNewell/curt-vcon)
+- **Repo:** [github.com/dotcurt/curt-vcon](https://github.com/dotcurt/curt-vcon)
 - **npm:** [`curt-vcon@1.0.1`](https://www.npmjs.com/package/curt-vcon) (MIT)
 - **Role:** read + write (bridge)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
@@ -69,4 +69,4 @@ vCon→.curt direction. Field names were verified against draft
 The repo README carries the full field-mapping tables in both directions,
 the fidelity matrix, the documented spec-level mismatches, and open
 questions for the vCon working group:
-[github.com/JordanNewell/curt-vcon](https://github.com/JordanNewell/curt-vcon).
+[github.com/dotcurt/curt-vcon](https://github.com/dotcurt/curt-vcon).

@@ -17,7 +17,7 @@ Chat. It cannot change without breaking every existing file, so it stays.
 The format itself is vendor-neutral, and nothing in the spec favors
 Curtis — the spec says so directly, and the `generator` field exists so
 *your* app can sign what it wrote. See SPEC "File shape" and the [names
-table](https://github.com/JordanNewell/dot_curt#names-disambiguated) in the
+table](https://github.com/dotcurt/dot_curt#names-disambiguated) in the
 README.
 
 ## Why tolerate a BOM?
@@ -58,7 +58,7 @@ BUSL-1.1; the relicense was deliberate: a standard that requires permission
 to implement is not open. The Curtis *applications* (plugin, Porter, web,
 cloud) are separate works under BUSL-1.1 — the moat is in the apps, not
 the standard. See the README's [License
-section](https://github.com/JordanNewell/dot_curt#license).
+section](https://github.com/dotcurt/dot_curt#license).
 
 ## Is an empty `messages` array valid?
 

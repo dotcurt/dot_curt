@@ -9,7 +9,7 @@ description: "Busabase record review trails -> .curt — npm curt-busabase."
 Converts **Busabase** record review trails — agent change requests, human
 reviews, comments — into **.curt** single-file conversation files.
 
-- **Repo:** [github.com/JordanNewell/curt-busabase](https://github.com/JordanNewell/curt-busabase)
+- **Repo:** [github.com/dotcurt/curt-busabase](https://github.com/dotcurt/curt-busabase)
 - **npm:** [`curt-busabase@1.0.1`](https://www.npmjs.com/package/curt-busabase) (MIT)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — parsing and validation come from the reference; every converted file

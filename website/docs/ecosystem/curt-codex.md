@@ -8,7 +8,7 @@ description: "OpenAI Codex CLI session rollouts -> .curt, and .curt -> Codex rol
 
 A two-direction bridge between **OpenAI Codex CLI** session rollout files and **.curt**.
 
-- **Repo:** [github.com/JordanNewell/curt-codex](https://github.com/JordanNewell/curt-codex)
+- **Repo:** [github.com/dotcurt/curt-codex](https://github.com/dotcurt/curt-codex)
 - **npm:** [`curt-codex@1.0.0`](https://www.npmjs.com/package/curt-codex) (MIT)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — parsing and validation come from the reference; every converted file
