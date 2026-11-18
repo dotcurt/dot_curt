@@ -84,7 +84,10 @@ jobs:
             base="https://dotcurt-site.pages.dev"
             ok_codes="200"
           else
-            base="https://${{ github.ref_name }}.dotcurt-site.pages.dev"
+            # slashed branches (docs/org-rename) are invalid hostnames raw;
+            # CF Pages preview aliases sanitize non-alphanumerics to '-'
+            slug=$(printf '%s' "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9]/-/g')
+            base="https://${slug}.dotcurt-site.pages.dev"
             ok_codes="200 302"
           fi
           for path in / /adopt/ /posts/2026-10-25-one-file/ /viewer/; do
@@ -174,7 +177,10 @@ jobs:
             base="https://dotcurt-docs.pages.dev"
             ok_codes="200"
           else
-            base="https://${{ github.ref_name }}.dotcurt-docs.pages.dev"
+            # slashed branches (docs/org-rename) are invalid hostnames raw;
+            # CF Pages preview aliases sanitize non-alphanumerics to '-'
+            slug=$(printf '%s' "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9]/-/g')
+            base="https://${slug}.dotcurt-docs.pages.dev"
             ok_codes="200 302"
           fi
           for path in / /docs/spec/ /docs/faq/ /docs/status/; do
