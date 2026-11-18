@@ -13,7 +13,7 @@ The same rendering runs online at
 [dotcurt.org/viewer](https://dotcurt.org/viewer/) if you would rather
 drop a file in a browser tab than install anything.
 
-- **Repo:** [github.com/JordanNewell/curt-openwith](https://github.com/JordanNewell/curt-openwith)
+- **Repo:** [github.com/dotcurt/curt-openwith](https://github.com/dotcurt/curt-openwith)
 - **Install:** Scoop (Windows), Homebrew (macOS/Linux), or a GitHub
   release zip — see below. Not an npm package.
 - **Role:** read only (file association; the viewer never rewrites)
@@ -36,7 +36,7 @@ bash "$(brew --prefix curt-openwith)/libexec/linux/install.sh" # Linux
 ```
 
 Manual installs come from
-[GitHub Releases](https://github.com/JordanNewell/curt-openwith/releases).
+[GitHub Releases](https://github.com/dotcurt/curt-openwith/releases).
 Every installer registers the `.curt` handler for the current user only —
 no admin, no sudo, nothing machine-wide; `uninstall.cmd` /
 `mac/uninstall.sh` / `linux/uninstall.sh` remove it cleanly.
@@ -64,4 +64,4 @@ Packaging internals (the reproducible `CurtViewer.exe`, the mac/Linux
 generator, the CI QA matrix that runs real install/uninstall on mac and
 Ubuntu runners) and the provenance note on how `viewer/` syncs from the
 dot_curt site live in the repo README:
-[github.com/JordanNewell/curt-openwith](https://github.com/JordanNewell/curt-openwith).
+[github.com/dotcurt/curt-openwith](https://github.com/dotcurt/curt-openwith).

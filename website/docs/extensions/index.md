@@ -54,11 +54,11 @@ registry's full normative text is rendered at
 [Extension registry — full text](/docs/extensions-registry).
 
 Full per-consumer emit/accept data lives in
-[`capabilities.json`](https://github.com/JordanNewell/dot_curt/blob/main/capabilities.json).
+[`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json).
 
 ## Adding an entry
 
 Open a PR against
-[`EXTENSIONS.md`](https://github.com/JordanNewell/dot_curt/blob/main/EXTENSIONS.md)
+[`EXTENSIONS.md`](https://github.com/dotcurt/dot_curt/blob/main/EXTENSIONS.md)
 — see [governance](/docs/governance) for the required sections and the
 stability bar.

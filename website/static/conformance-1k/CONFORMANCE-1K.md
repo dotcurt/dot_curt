@@ -3,7 +3,7 @@
 **Level:** L3 BULK — proves the .curt format scales on a real corpus. This
 document is the published record of the run; the sample itself lives locally
 under `work/` in the
-[curt-wildchat](https://github.com/JordanNewell/curt-wildchat) repo checkout
+[curt-wildchat](https://github.com/dotcurt/curt-wildchat) repo checkout
 and stays there — no converted conversation content is uploaded, published,
 or committed anywhere. Only the aggregate statistics below are public.
 
@@ -68,7 +68,7 @@ for bulk ingestion of any corpus with non-unique ids.
 ## Reproduce
 
 ```sh
-git clone https://github.com/JordanNewell/curt-wildchat
+git clone https://github.com/dotcurt/curt-wildchat
 cd curt-wildchat
 mkdir -p work
 curl -sL -o work/shard0.parquet \
@@ -94,8 +94,8 @@ node dist/cli.js work/sample-1k.jsonl -o work/out-1k
 ## License
 
 Converted content is ODC-BY (WildChat-1M); see
-[ACCESS-AND-LICENSE.md](https://github.com/JordanNewell/curt-wildchat/blob/main/ACCESS-AND-LICENSE.md).
+[ACCESS-AND-LICENSE.md](https://github.com/dotcurt/curt-wildchat/blob/main/ACCESS-AND-LICENSE.md).
 If these files ever leave the machine they were generated on, carry the
 ODC-BY §4.3 attribution notice from the
-[README](https://github.com/JordanNewell/curt-wildchat) — but the default
+[README](https://github.com/dotcurt/curt-wildchat) — but the default
 for this artifact is: the sample does not leave.

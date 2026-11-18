@@ -30,7 +30,7 @@ at least two independent implementations round-trip it. Exception: the two seed 
 | `agent-context` | draft | curtis plugin, porter, curtis-cloud, curtis-ai-tech | Agent/swarm provenance on conversations and messages |
 | `consensus-receipt` | draft | tractum | Signed k-of-n consensus decision bound to the transcript evidence |
 
-Full per-consumer emit/accept data: [`capabilities.json`](https://github.com/JordanNewell/dot_curt/blob/main/capabilities.json).
+Full per-consumer emit/accept data: [`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json).
 
 ---
 

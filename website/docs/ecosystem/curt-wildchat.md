@@ -12,7 +12,7 @@ into `.curt` single-file conversation files. Sister to
 [`curt-convert`](/docs/ecosystem/curt-convert) (Claude Code transcripts →
 .curt).
 
-- **Repo:** [github.com/JordanNewell/curt-wildchat](https://github.com/JordanNewell/curt-wildchat)
+- **Repo:** [github.com/dotcurt/curt-wildchat](https://github.com/dotcurt/curt-wildchat)
 - **npm:** [`curt-wildchat@1.0.2`](https://www.npmjs.com/package/curt-wildchat) (MIT)
 - **Role:** write only (bulk converter + dataset demos)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
@@ -81,11 +81,11 @@ The converter is MIT and ships no WildChat content (fixtures are fully
 synthetic). WildChat-1M data is ODC-BY; if you publicly convey converted
 WildChat content, carry the ODC-BY §4.3 attribution notice — exact wording
 and the verified license record are in
-[ACCESS-AND-LICENSE.md](https://github.com/JordanNewell/curt-wildchat/blob/main/ACCESS-AND-LICENSE.md).
+[ACCESS-AND-LICENSE.md](https://github.com/dotcurt/curt-wildchat/blob/main/ACCESS-AND-LICENSE.md).
 
 ## Where to go deeper
 
 Full mapping table, documented losses, the staged demos under `demos/`
 (hand-picked benign records with identity metadata scrubbed), and
 <a href="/conformance-1k/CONFORMANCE-1K.md"><code>CONFORMANCE-1K.md</code></a>:
-[github.com/JordanNewell/curt-wildchat](https://github.com/JordanNewell/curt-wildchat).
+[github.com/dotcurt/curt-wildchat](https://github.com/dotcurt/curt-wildchat).

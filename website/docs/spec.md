@@ -34,10 +34,10 @@ The magic string `"curtis-conversation"` is a version-1 compatibility legacy
 of the format's origin in Curtis AI Chat; the format itself is
 vendor-neutral, and nothing in this spec favors Curtis.
 
-Reference implementation: [`src/index.ts`](https://github.com/JordanNewell/dot_curt/blob/main/src/index.ts) (TypeScript, zero
+Reference implementation: [`src/index.ts`](https://github.com/dotcurt/dot_curt/blob/main/src/index.ts) (TypeScript, zero
 dependencies, MIT). Third-party writers are welcome; the `generator` field
 exists so your app can sign what it wrote. A non-normative
-[JSON Schema](https://github.com/JordanNewell/dot_curt/blob/main/schema/curt-v1.schema.json) is provided for tooling.
+[JSON Schema](https://github.com/dotcurt/dot_curt/blob/main/schema/curt-v1.schema.json) is provided for tooling.
 Optional capabilities grow through the [extension registry](/docs/extensions);
 implementations are graded against executable vectors in
 [`conformance/`](/docs/conformance).
@@ -151,7 +151,7 @@ parser accepts.
 
 ## JSON Schema
 
-[`schema/curt-v1.schema.json`](https://github.com/JordanNewell/dot_curt/blob/main/schema/curt-v1.schema.json) is a non-normative
+[`schema/curt-v1.schema.json`](https://github.com/dotcurt/dot_curt/blob/main/schema/curt-v1.schema.json) is a non-normative
 draft-07 rendering of the validation rules, for editors, linters, and
 third-party tooling. The normative rules are this document; when in doubt,
 `parseCurt` decides.

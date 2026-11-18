@@ -9,7 +9,7 @@ description: "Live status of every .curt consumer, rendered from the machine-rea
 
 # Ecosystem status
 
-Rendered from [`capabilities.json`](https://github.com/JordanNewell/dot_curt/blob/main/capabilities.json) — the single source of truth, regenerated on every site build. Last audit 2026-10-17; tracker format version 1; spec revision curt-format@1.2.0. Reference conformance: L1+L2+L3+L4.
+Rendered from [`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json) — the single source of truth, regenerated on every site build. Last audit 2026-10-17; tracker format version 1; spec revision curt-format@1.2.0. Reference conformance: L1+L2+L3+L4.
 
 ## Consumers (16)
 

@@ -7,7 +7,7 @@ description: "The non-normative draft-07 schema for .curt v1 — for editors, li
 
 # JSON Schema
 
-[`schema/curt-v1.schema.json`](https://github.com/JordanNewell/dot_curt/blob/main/schema/curt-v1.schema.json)
+[`schema/curt-v1.schema.json`](https://github.com/dotcurt/dot_curt/blob/main/schema/curt-v1.schema.json)
 is a **non-normative** draft-07 rendering of the version-1 validation rules,
 for editors, linters, and third-party tooling.
 

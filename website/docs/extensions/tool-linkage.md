@@ -25,6 +25,6 @@ fidelity), while this linkage schema is still stabilizing and so rides as
 a draft extension.
 
 Conformance vectors for it live in
-[`conformance/vectors/extensions.json`](https://github.com/JordanNewell/dot_curt/blob/main/conformance/vectors/extensions.json);
+[`conformance/vectors/extensions.json`](https://github.com/dotcurt/dot_curt/blob/main/conformance/vectors/extensions.json);
 all extension cases are accept-only — declaring or malforming the
 extension must never cause rejection.

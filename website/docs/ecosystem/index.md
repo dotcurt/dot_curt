@@ -11,9 +11,9 @@ Sixteen implementations read or write `.curt` today. All are same-author
 [conformance vectors](/docs/conformance) exist so a claim from anyone can
 be checked in minutes. Per-consumer detail (dependency style, spec
 revision, conformance drift) lives in
-[CAPABILITIES.md](https://github.com/JordanNewell/dot_curt/blob/main/CAPABILITIES.md)
+[CAPABILITIES.md](https://github.com/dotcurt/dot_curt/blob/main/CAPABILITIES.md)
 and its machine-readable twin
-[`capabilities.json`](https://github.com/JordanNewell/dot_curt/blob/main/capabilities.json) — rendered for humans, at build time, on the
+[`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json) — rendered for humans, at build time, on the
 [Ecosystem status](/docs/status) page.
 
 ## In (16)
@@ -21,20 +21,20 @@ and its machine-readable twin
 | Implementation | Role | Read/Write |
 |---|---|---|
 | [curtis](https://github.com/JordanNewell/curtis) (Obsidian plugin) | import / export / backup | R + W |
-| [curt-openwith](https://github.com/JordanNewell/curt-openwith) | double-click any `.curt` file — offline viewer | R |
+| [curt-openwith](https://github.com/dotcurt/curt-openwith) | double-click any `.curt` file — offline viewer | R |
 | [curtis-ai-porter](https://github.com/JordanNewell/curtis-ai-porter) | converter + verify oracle | R + W |
 | curtis-web (private) | export endpoint | W |
 | curtis-cloud (`@curtisai/shared`) | shared library | R + W |
 | curtis-ai-tech | embedded converter + docs | R + W |
 | [tractum](https://github.com/JordanNewell/tractum) | Python SDK — signed consensus receipts | R + W |
-| [curt-vcon](https://github.com/JordanNewell/curt-vcon) | .curt ⇄ vCon (IETF) bridge | R + W |
-| [curt-convert](https://github.com/JordanNewell/curt-convert) | Claude Code transcripts → .curt | W |
-| [curt-busabase](https://github.com/JordanNewell/curt-busabase) | Busabase review trails → .curt | W |
-| [curt-openclaw](https://github.com/JordanNewell/curt-openclaw) | OpenClaw gateway sessions → .curt | W |
-| [curt-hermes](https://github.com/JordanNewell/curt-hermes) | Hermes state.db → .curt; .curt → Claude Code JSONL | R + W |
-| [curt-codex](https://github.com/JordanNewell/curt-codex) | Codex CLI rollouts ⇄ .curt | R + W |
+| [curt-vcon](https://github.com/dotcurt/curt-vcon) | .curt ⇄ vCon (IETF) bridge | R + W |
+| [curt-convert](https://github.com/dotcurt/curt-convert) | Claude Code transcripts → .curt | W |
+| [curt-busabase](https://github.com/dotcurt/curt-busabase) | Busabase review trails → .curt | W |
+| [curt-openclaw](https://github.com/dotcurt/curt-openclaw) | OpenClaw gateway sessions → .curt | W |
+| [curt-hermes](https://github.com/dotcurt/curt-hermes) | Hermes state.db → .curt; .curt → Claude Code JSONL | R + W |
+| [curt-codex](https://github.com/dotcurt/curt-codex) | Codex CLI rollouts ⇄ .curt | R + W |
 | [langchain-curt](https://pypi.org/project/langchain-curt/) | LangChain chat loader for .curt | R |
-| [curt-wildchat](https://github.com/JordanNewell/curt-wildchat) | WildChat-1M records → .curt | W |
+| [curt-wildchat](https://github.com/dotcurt/curt-wildchat) | WildChat-1M records → .curt | W |
 | curt-openwebui (local, unpublished) | Open WebUI exporter | W |
 
 ## Out (8, no `.curt` code)

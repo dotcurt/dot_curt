@@ -16,7 +16,7 @@ Export [Open WebUI](https://github.com/open-webui/open-webui) chats to
    [open-webui/pipelines](https://github.com/open-webui/pipelines) filter
    that writes/updates a `.curt` file as each conversation happens.
 
-- **Repo:** [github.com/JordanNewell/curt-openwebui](https://github.com/JordanNewell/curt-openwebui)
+- **Repo:** [github.com/dotcurt/curt-openwebui](https://github.com/dotcurt/curt-openwebui)
 - **Publishing status:** local and unpublished — no npm package yet. The
   TS side depends on
   [`curt-format`](https://www.npmjs.com/package/curt-format); the Python
@@ -67,4 +67,4 @@ does parse valid in the reference parser (cross-checked 2026-11-01).
 The full schema-verification table (every field name with its open-webui
 source file), the complete mapping table, known losses, and pipeline
 valves live in the repo README:
-[github.com/JordanNewell/curt-openwebui](https://github.com/JordanNewell/curt-openwebui).
+[github.com/dotcurt/curt-openwebui](https://github.com/dotcurt/curt-openwebui).

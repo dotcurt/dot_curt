@@ -69,14 +69,14 @@ curt-format/schema/curt-v1.schema.json
 | Implementation | Role | Read/Write |
 |---|---|---|
 | [curtis](https://github.com/JordanNewell/curtis) (Obsidian plugin) | import / export / backup | R + W |
-| [curt-openwith](https://github.com/JordanNewell/curt-openwith) | double-click any `.curt` file — offline viewer (Windows + macOS + Linux) | R |
+| [curt-openwith](https://github.com/dotcurt/curt-openwith) | double-click any `.curt` file — offline viewer (Windows + macOS + Linux) | R |
 | [curtis-ai-porter](https://github.com/JordanNewell/curtis-ai-porter) | converter + verify oracle | R + W |
 | [curtis-web](https://github.com/JordanNewell/curtis-web) (private) | export endpoint | W |
 | curtis-cloud (`@curtisai/shared`) | shared library | R + W |
 | curtis-ai-tech | embedded converter + docs | R + W |
 | [tractum](https://github.com/JordanNewell/tractum) | Python SDK — signed consensus receipts | R + W |
-| [curt-vcon](https://github.com/JordanNewell/curt-vcon) | .curt ⇄ vCon bridge | R + W |
-| [curt-convert](https://github.com/JordanNewell/curt-convert) | Claude Code JSONL → .curt | W |
+| [curt-vcon](https://github.com/dotcurt/curt-vcon) | .curt ⇄ vCon bridge | R + W |
+| [curt-convert](https://github.com/dotcurt/curt-convert) | Claude Code JSONL → .curt | W |
 | curt-openwebui (local, unpublished) | Open WebUI exporter | W |
 
 Per-consumer detail — dependency style, spec revision, conformance drift —

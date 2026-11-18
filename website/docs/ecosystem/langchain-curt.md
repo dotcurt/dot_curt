@@ -8,7 +8,7 @@ description: "LangChain chat loader for .curt conversation files — PyPI langch
 
 A **LangChain** chat-message loader that reads **.curt** conversation files.
 
-- **Repo:** [github.com/JordanNewell/langchain-curt](https://github.com/JordanNewell/langchain-curt)
+- **Repo:** [github.com/dotcurt/langchain-curt](https://github.com/dotcurt/langchain-curt)
 - **PyPI:** [`langchain-curt@0.1.0`](https://pypi.org/project/langchain-curt/) (MIT)
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — parsing and validation come from the reference; every converted file

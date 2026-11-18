@@ -10,7 +10,7 @@ Convert Claude Code session transcripts (`.jsonl`) into `.curt`
 single-file conversation files. Sister tool to
 [`curt-wildchat`](/docs/ecosystem/curt-wildchat).
 
-- **Repo:** [github.com/JordanNewell/curt-convert](https://github.com/JordanNewell/curt-convert)
+- **Repo:** [github.com/dotcurt/curt-convert](https://github.com/dotcurt/curt-convert)
 - **npm:** [`curt-convert@1.0.2`](https://www.npmjs.com/package/curt-convert) (MIT)
 - **Role:** write only
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
@@ -61,4 +61,4 @@ secrets, the `.curt` file contains them too. Scrub before sharing.
 
 The full mapping table (every JSONL line type, kept or dropped), the
 documented-losses ledger, and the security note live in the repo README:
-[github.com/JordanNewell/curt-convert](https://github.com/JordanNewell/curt-convert).
+[github.com/dotcurt/curt-convert](https://github.com/dotcurt/curt-convert).

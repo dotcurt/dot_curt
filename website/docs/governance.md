@@ -20,7 +20,7 @@ and the audit trail is the git history.
 ## Extension proposal process
 
 Open a pull request against
-[`EXTENSIONS.md`](https://github.com/JordanNewell/dot_curt/blob/main/EXTENSIONS.md)
+[`EXTENSIONS.md`](https://github.com/dotcurt/dot_curt/blob/main/EXTENSIONS.md)
 adding a section. Each entry MUST have:
 
 - `name` — lowercase, hyphenated, unique.
@@ -30,7 +30,7 @@ adding a section. Each entry MUST have:
 - The exact fields it reads/writes, and where (conversation-level or
   message-level).
 - Conformance vectors in
-  [`conformance/vectors/extensions.json`](https://github.com/JordanNewell/dot_curt/blob/main/conformance/vectors/extensions.json).
+  [`conformance/vectors/extensions.json`](https://github.com/dotcurt/dot_curt/blob/main/conformance/vectors/extensions.json).
 
 Constraints the spec imposes on every entry: extensions cannot conflict
 with core field names, must not change how the core validates, and the
@@ -44,7 +44,7 @@ implementations** round-trip it. Same-author emissions do not count:
 `curt-convert` emitting `tool-linkage` alongside the reference's own
 implementation keeps that extension at draft, because both share an author.
 This is checked against the ecosystem tracker
-([CAPABILITIES.md](https://github.com/JordanNewell/dot_curt/blob/main/CAPABILITIES.md)),
+([CAPABILITIES.md](https://github.com/dotcurt/dot_curt/blob/main/CAPABILITIES.md)),
 not asserted.
 
 ## Self-reported conformance
