@@ -91,7 +91,7 @@
 			<a href="../listen/">listen</a>
 			<a href="../try/">try</a>
 			<a href="../paper/" aria-current="page">paper</a>
-			<a href="https://github.com/JordanNewell/dot_curt">github</a>
+			<a href="https://github.com/dotcurt/dot_curt">github</a>
 		</nav>
 	</div>
 </header>
@@ -103,14 +103,14 @@
 			<p class="kicker">Preprint · November 1, 2026 · cs.CY · <a href="https://doi.org/10.5281/zenodo.23864677">DOI 10.5281/zenodo.23864677</a> · arXiv pending endorsement</p>
 			<h1><span class="dot">.</span>curt: A Conversations-First, LLM-Native File Format with Executable Conformance for AI Chat Portability</h1>
 			<p class="byline">Jordan Newell</p>
-			<p class="artifact-line"><span class="k">Artifact</span> <a href="https://dotcurt.org/">https://dotcurt.org/</a> · <a href="https://www.npmjs.com/package/curt-format"><code>npm install curt-format</code></a> · <a href="https://github.com/JordanNewell/dot_curt/blob/main/LICENSE">MIT</a> · <a href="dotcurt.pdf">PDF</a></p>
+			<p class="artifact-line"><span class="k">Artifact</span> <a href="https://dotcurt.org/">https://dotcurt.org/</a> · <a href="https://www.npmjs.com/package/curt-format"><code>npm install curt-format</code></a> · <a href="https://github.com/dotcurt/dot_curt/blob/main/LICENSE">MIT</a> · <a href="dotcurt.pdf">PDF</a></p>
 
 			<ul class="vitals" aria-label="The checkable claims">
-				<li><span class="k">conformance</span><a href="https://github.com/JordanNewell/dot_curt/actions/workflows/ci.yml">27 vectors · passing in CI</a></li>
+				<li><span class="k">conformance</span><a href="https://github.com/dotcurt/dot_curt/actions/workflows/ci.yml">27 vectors · passing in CI</a></li>
 				<li><span class="k">spec</span>frozen · v1</li>
 				<li><span class="k">license</span>MIT · permanent</li>
-				<li><span class="k">audit</span><a href="https://github.com/JordanNewell/dot_curt/blob/main/CAPABILITIES.md">2026-10-14 · public</a></li>
-				<li><span class="k">implementations</span><a href="https://github.com/JordanNewell/dot_curt/blob/main/CAPABILITIES.md">11 · public tracker</a></li>
+				<li><span class="k">audit</span><a href="https://github.com/dotcurt/dot_curt/blob/main/CAPABILITIES.md">2026-10-14 · public</a></li>
+				<li><span class="k">implementations</span><a href="https://github.com/dotcurt/dot_curt/blob/main/CAPABILITIES.md">11 · public tracker</a></li>
 			</ul>
 		</header>
 
@@ -122,10 +122,10 @@
 		<aside class="alongside" aria-label="Read alongside">
 			<p class="label">Read alongside</p>
 			<ul>
-				<li><span class="k">spec</span> — <a href="https://github.com/JordanNewell/dot_curt/blob/main/SPEC.md">the normative specification</a>
+				<li><span class="k">spec</span> — <a href="https://github.com/dotcurt/dot_curt/blob/main/SPEC.md">the normative specification</a>
       <a href="https://docs.dotcurt.org/" target="_blank" rel="noopener">docs</a></li>
-				<li><span class="k">vectors</span> — <a href="https://github.com/JordanNewell/dot_curt/tree/main/conformance">the 27 conformance vectors, plain JSON</a></li>
-				<li><span class="k">audit</span> — <a href="https://github.com/JordanNewell/dot_curt/blob/main/CAPABILITIES.md">the ecosystem audit, the honest scoreboard</a></li>
+				<li><span class="k">vectors</span> — <a href="https://github.com/dotcurt/dot_curt/tree/main/conformance">the 27 conformance vectors, plain JSON</a></li>
+				<li><span class="k">audit</span> — <a href="https://github.com/dotcurt/dot_curt/blob/main/CAPABILITIES.md">the ecosystem audit, the honest scoreboard</a></li>
 				<li><span class="k">listen</span> — <a href="/listen/">the listening copy, the paper read aloud</a></li>
 			</ul>
 		</aside>
@@ -279,7 +279,7 @@
 		<section class="p-sec" id="s7">
 			<h2><span class="secnum" aria-hidden="true">7</span>Conclusion and artifact</h2>
 			<p>We presented .curt, a single-file, conversations-first, LLM-native conversation format with a frozen core, an additive extension registry, and tiered executable conformance, together with an account of the gap it fills: vendor exports are undocumented and unstable, training formats are lossy, agent transports do not persist, standards-track containers lack LLM-native semantics and executable vectors, memory-first efforts index conversations rather than archive them, and the one open export specification — a portability nonprofit's schema registry entry — stops at a generic transcript with no validation and no conformance story. The portability-rights literature establishes that rights without interoperable formats fail, and the 2025–2026 scholarship reaches generative AI without ever reaching the conversation archive; .curt is the format-side contribution for that unclaimed data class. The invitation to convergence with parallel efforts (<a href="#s6">§6</a>) stands open.</p>
-			<p><strong>Artifact.</strong> The specification (<code>SPEC.md</code>), extension registry (<code>EXTENSIONS.md</code>), conformance vectors (<code>conformance/</code>), ecosystem tracker (<code>capabilities.json</code>), JSON Schema, and zero-dependency reference implementation are MIT-licensed at <a href="https://github.com/JordanNewell/dot_curt">https://github.com/JordanNewell/dot_curt</a> and published as <code>curt-format@1.2.0</code> on npm; the spec site is <a href="https://dotcurt.org/">https://dotcurt.org/</a>. Vectors are plain JSON and runnable without the reference implementation; we invite independent implementations and conformance reports.</p>
+			<p><strong>Artifact.</strong> The specification (<code>SPEC.md</code>), extension registry (<code>EXTENSIONS.md</code>), conformance vectors (<code>conformance/</code>), ecosystem tracker (<code>capabilities.json</code>), JSON Schema, and zero-dependency reference implementation are MIT-licensed at <a href="https://github.com/dotcurt/dot_curt">https://github.com/dotcurt/dot_curt</a> and published as <code>curt-format@1.2.0</code> on npm; the spec site is <a href="https://dotcurt.org/">https://dotcurt.org/</a>. Vectors are plain JSON and runnable without the reference implementation; we invite independent implementations and conformance reports.</p>
 		</section>
 
 		<section class="p-sec" id="disclosure">
@@ -324,10 +324,10 @@
 	<div class="wrap">
 		<span><span class="dot" style="font-family: var(--font-records);">.</span>curt — the conversation format · MIT · v1</span>
 		<span>
-			<a href="https://github.com/JordanNewell/dot_curt/blob/main/SPEC.md">spec</a>
-			· <a href="https://github.com/JordanNewell/dot_curt/blob/main/EXTENSIONS.md">registry</a>
+			<a href="https://github.com/dotcurt/dot_curt/blob/main/SPEC.md">spec</a>
+			· <a href="https://github.com/dotcurt/dot_curt/blob/main/EXTENSIONS.md">registry</a>
 			· <a href="https://www.npmjs.com/package/curt-format">npm</a>
-			· <a href="https://github.com/JordanNewell/dot_curt">github</a>
+			· <a href="https://github.com/dotcurt/dot_curt">github</a>
 			· born in <a href="https://github.com/JordanNewell/curtis-ai-chat">Curtis AI Chat</a>
 			· <a href="https://www.curtisai.tech/curt/">curtisai.tech/curt</a>
 		</span>
