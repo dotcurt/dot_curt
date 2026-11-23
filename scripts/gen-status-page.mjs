@@ -17,7 +17,9 @@ const TARGET = join(ROOT, 'website', 'docs', 'status.md');
 
 // Markdown table cells: backslashes first, then the pipe delimiter.
 function cell(s) {
-	return String(s).replace(/\\/g, '\\\\').replace(/\|/g, '\\|');
+	// `<` must be escaped: status.md compiles as MDX and a bare `<token>`
+	// (e.g. "<corpusDir>" from a CLI usage string) parses as an unclosed JSX tag.
+	return String(s).replace(/\\/g, '\\\\').replace(/\|/g, '\\|').replace(/</g, '&lt;');
 }
 
 function yaml(s) {
@@ -63,7 +65,7 @@ Entries without an explicit \`evidenceDate\` predate that field; their evidence 
 
 ${rows
 	.filter((r) => r.notes)
-	.map((r) => `- **${cell(r.id)}** — ${r.notes}`)
+	.map((r) => `- **${cell(r.id)}** — ${cell(r.notes)}`)
 	.join('\n')}
 
 ## Out of ecosystem (${json.outOfEcosystem?.length ?? 0})

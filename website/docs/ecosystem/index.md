@@ -16,7 +16,7 @@ and its machine-readable twin
 [`capabilities.json`](https://github.com/dotcurt/dot_curt/blob/main/capabilities.json) — rendered for humans, at build time, on the
 [Ecosystem status](/docs/status) page.
 
-## In (16)
+## In (17)
 
 | Implementation | Role | Read/Write |
 |---|---|---|
@@ -35,6 +35,7 @@ and its machine-readable twin
 | [curt-codex](https://github.com/dotcurt/curt-codex) | Codex CLI rollouts ⇄ .curt | R + W |
 | [langchain-curt](https://pypi.org/project/langchain-curt/) | LangChain chat loader for .curt | R |
 | [curt-wildchat](https://github.com/dotcurt/curt-wildchat) | WildChat-1M records → .curt | W |
+| [curt-claudeai](https://github.com/dotcurt/curt-claudeai) | claude.ai data exports → .curt | W |
 | curt-openwebui (local, unpublished) | Open WebUI exporter | W |
 
 ## Out (8, no `.curt` code)
