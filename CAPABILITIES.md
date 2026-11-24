@@ -27,12 +27,13 @@ Two version axes (per SPEC.md "Versioning"):
 
 ## In / out
 
-**In (16):** `curtis` (Obsidian plugin) · `curt-openwith` (offline viewer) ·
+**In (17):** `curtis` (Obsidian plugin) · `curt-openwith` (offline viewer) ·
 `curtis-ai-chat-porter` · `curtis-web` · `curtis-cloud`
 (`@curtisai/shared`) · `curtis-ai-tech` (inline Porter app) · `tractum`
 (Python SDK) · `curt-vcon` · `curt-convert` · `curt-wildchat` ·
 `curt-openwebui` (local, unpublished) · `curt-openclaw` · `curt-hermes` ·
-`curt-codex` · `langchain-curt` (PyPI) · `curt-busabase` (npm 2026-11-05).
+`curt-codex` · `langchain-curt` (PyPI) · `curt-busabase` (npm 2026-11-05) ·
+`curt-claudeai` (npm 2026-11-22).
 
 **Out (8, no `.curt` code):** curtis-compliance, curtis-console, curtis-os,
 curtis-ai-chat-zed, curtis-ai-symphony, curtis-ai-crm, curtis-ai-browser,
@@ -59,6 +60,7 @@ curtis-ai-theme.
 | **curt-hermes** (`curt-hermes@1.0.0`, npm 2026-11-01) | Hermes agent state.db (SQLite) → .curt; .curt → Claude Code session JSONL for Hermes import | R/W | **npm `curt-format`** | `curt-hermes@v` | ✅ (via ref, read path) | ✅ (via ref) | ✅ (read path) | ✅ | ❌ | ⚠️ vectors not run; entries added at registration 2026-11-02 without full re-audit |
 | **curt-codex** (`curt-codex@1.0.0`, npm 2026-11-01) | OpenAI Codex CLI session rollouts → .curt; .curt → Codex rollout JSONL (input for hermes/OpenClaw import) | R/W | **npm `curt-format`** | `curt-codex@v` | ✅ (via ref, read path) | ✅ (via ref) | ✅ (read path) | ✅ | ❌ | ⚠️ vectors not run; entries added at registration 2026-11-02 without full re-audit |
 | **langchain-curt** (`langchain-curt@0.1.0`, PyPI 2026-11-01) | LangChain chat loader — read .curt conversations as LangChain messages | R | native (own loader, spec rules per readme) | `langchain-curt@v` | ✅ (per readme) | ✅ (per readme) | ✅ (per readme) | n/a (emits messages) | ❌ | ⚠️ vectors not run; entries added at registration 2026-11-02 without full re-audit |
+| **curt-claudeai** (`curt-claudeai@1.0.0`, npm 2026-11-22) | claude.ai data export (conversations.json) → .curt (bulk + single + legacy string-content; voice_note + artifacts-as-tool_use mapping) | W only | **npm `curt-format`** | `curt-claudeai@v` | n/a | ✅ (self-check via ref) | ⚠️ writer extras (thinking/voiceTitle preserved) | ✅ (`curtFilename`, deterministic collision suffix on duplicate names) | ❌ | ✅ **vector run 2026-11-22**: 45/45 via `scripts/run-conformance.mjs` (L1 core 13 + L2 named 7 + L4 extensions incl. tool-linkage + L3-writer corpus naming; first claude.ai-family writer to execute the vectors; reproducible against your own corpus) + 16 tests green |
 
 ## Findings (2026-10-14)
 
