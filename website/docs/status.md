@@ -23,7 +23,7 @@ Rendered from [`capabilities.json`](https://github.com/JordanNewell/dot_curt/blo
 | curtis-ai-tech | static site (public/porter-app.html inline app) | R + W | inline | not audited | 2026-10-17 |
 | tractum | tractum@0.5.0 | R + W | native | not audited | 2026-10-17 |
 | curt-vcon | curt-vcon@1.0.1 (npm 2026-11-01) | R + W | npm | not audited | 2026-11-01 |
-| curt-convert | curt-convert@1.0.2 (npm 2026-11-01) | W | npm | not audited | 2026-11-01 |
+| curt-convert | curt-convert@1.0.5 (npm 2026-11-25) | W | npm | not audited | 2026-11-27 |
 | curt-wildchat | curt-wildchat@1.0.2 (npm 2026-11-01) | W | npm | not audited | 2026-11-01 |
 | curt-openwebui | curt-openwebui-export@1.0.0 (unpublished) + pipelines/curt_export_pipeline.py v0.1.0 (draft) | W | npm + hand-rolled | not audited | 2026-11-01 |
 | curt-openclaw | curt-openclaw@1.0.0 | R + W | — | not audited | 2026-11-01 |
@@ -77,4 +77,4 @@ No `.curt` references; one grep to confirm still-out.
 - Version lineage is broken: porter's oracle pins curtis-ai-chat v2.0.1 (1c7a19f) but that repo now self-identifies as curtis@1.0.0.
 - 2026-11-01: the first npm-dependency consumers exist — curt-vcon, curt-convert, and curt-openwebui (TS side) depend on curt-format@1.2.0 instead of vendoring the rules. The zero-dependency finding above still holds for the five original consumers.
 - 2026-11-01: all three new consumers are same-author (JordanNewell) local builds — none published to GitHub or npm. Same-author emissions do not promote draft extensions: curt-convert's tool-linkage emission keeps the extension at draft (stable requires two independent implementations).
-- 2026-11-01 (publish day, supersedes the previous finding's publication half): curt-vcon@1.0.1, curt-convert@1.0.2, and curt-wildchat@1.0.2 are live on npm; curt-vcon, curt-convert, curt-wildchat, and curt-openwith are public GitHub repos (Gitea-SSOT + GH mirror). curt-openwebui remains local/unpublished. Same-author rule unchanged: draft extensions stay draft.
+- 2026-11-01 (publish day, supersedes the previous finding's publication half): curt-vcon@1.0.1, curt-convert (1.0.2 at publish; 1.0.5 since 2026-11-25), and curt-wildchat@1.0.2 are live on npm; curt-vcon, curt-convert, curt-wildchat, and curt-openwith are public GitHub repos (Gitea-SSOT + GH mirror). curt-openwebui remains local/unpublished. Same-author rule unchanged: draft extensions stay draft.

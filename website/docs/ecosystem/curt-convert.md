@@ -11,7 +11,7 @@ single-file conversation files. Sister tool to
 [`curt-wildchat`](/docs/ecosystem/curt-wildchat).
 
 - **Repo:** [github.com/dotcurt/curt-convert](https://github.com/dotcurt/curt-convert)
-- **npm:** [`curt-convert@1.0.2`](https://www.npmjs.com/package/curt-convert) (MIT)
+- **npm:** [`curt-convert@1.0.5`](https://www.npmjs.com/package/curt-convert) (MIT)
 - **Role:** write only
 - **Depends on:** [`curt-format`](https://www.npmjs.com/package/curt-format)
   — every output file is re-parsed with `parseCurt` before it is written;
