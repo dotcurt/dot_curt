@@ -68,32 +68,32 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         if: env.HAS_CF_TOKEN == 'true'
-        run: npx wrangler pages deploy site --project-name=dotcurt-site --branch="${{ github.ref_name }}"
+        # capture the URL wrangler actually prints instead of reconstructing
+        # <slug>.pages.dev from the branch name — CF Pages caps branch
+        # aliases at ~32 chars, so long branch names (dependabot PRs) got a
+        # guessed hostname that 404'd and failed the smoke-check forever.
+        run: |
+          set -o pipefail
+          npx wrangler pages deploy site --project-name=dotcurt-site --branch="${{ github.ref_name }}" | tee deploy-site.log
+          url=$(grep -oE 'https://[a-zA-Z0-9.-]+\.pages\.dev' deploy-site.log | head -1)
+          [ -n "$url" ] || { echo "no deployment URL found in wrangler output"; exit 1; }
+          echo "SITE_DEPLOY_URL=${url}" >> "$GITHUB_ENV"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 554619f8c7d3a4010cb161df3037269d
 
       - name: Smoke-check the deployment
         if: env.HAS_CF_TOKEN == 'true'
-        # main serves the production alias; other branches get
-        # <branch>.dotcurt-site.pages.dev behind Cloudflare Access — a 302
-        # to the login means the deployment is serving.
+        # smoke the unique deployment URL wrangler printed — works for main
+        # and preview branches alike. Previews sit behind Cloudflare
+        # Access — a 302 to the login means the deployment is serving.
         run: |
           sleep 20
-          if [ "${{ github.ref_name }}" = "main" ]; then
-            base="https://dotcurt-site.pages.dev"
-            ok_codes="200"
-          else
-            # slashed branches (docs/org-rename) are invalid hostnames raw;
-            # CF Pages preview aliases sanitize non-alphanumerics to '-'
-            slug=$(printf '%s' "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9]/-/g')
-            base="https://${slug}.dotcurt-site.pages.dev"
-            ok_codes="200 302"
-          fi
+          base="${SITE_DEPLOY_URL}"
           for path in / /adopt/ /posts/2026-10-25-one-file/ /viewer/; do
             code=$(curl -s -o /dev/null -w '%{http_code}' "${base}${path}")
             echo "${path} -> ${code}"
-            echo "$ok_codes" | grep -qw "$code" || { echo "FAIL: ${path} not in [$ok_codes]"; exit 1; }
+            echo "200 302" | grep -qw "$code" || { echo "FAIL: ${path} not in [200 302]"; exit 1; }
           done
 
       - name: No token yet — skip deploy
@@ -132,7 +132,10 @@ jobs:
         with:
           name: docs-build
           path: website/build
-          retention-days: 3
+          # 7d (was 3d): re-running only failed jobs after the artifact
+          # expired made docs-deploy fail with "Artifact not found" while
+          # green docs-qa was skipped. 7d keeps the re-run window alive.
+          retention-days: 7
 
   docs-deploy:
     needs: docs-qa
@@ -162,27 +165,26 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         if: env.HAS_CF_TOKEN == 'true'
-        run: npx wrangler pages deploy website/build --project-name=dotcurt-docs --branch="${{ github.ref_name }}"
+        # same alias-capture as the site lane — never reconstruct the
+        # hostname from the branch name (CF truncates long aliases)
+        run: |
+          set -o pipefail
+          npx wrangler pages deploy website/build --project-name=dotcurt-docs --branch="${{ github.ref_name }}" | tee deploy-docs.log
+          url=$(grep -oE 'https://[a-zA-Z0-9.-]+\.pages\.dev' deploy-docs.log | head -1)
+          [ -n "$url" ] || { echo "no deployment URL found in wrangler output"; exit 1; }
+          echo "DOCS_DEPLOY_URL=${url}" >> "$GITHUB_ENV"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: 554619f8c7d3a4010cb161df3037269d
 
       - name: Smoke-check the deployment
         if: env.HAS_CF_TOKEN == 'true'
-        # A brand-new *.pages.dev subdomain can take minutes to get its TLS
-        # cert — retry each path before declaring failure (curl exit 35).
+        # Smoke the unique deployment URL wrangler printed. A brand-new
+        # *.pages.dev subdomain can take minutes to get its TLS cert —
+        # retry each path before declaring failure (curl exit 35).
         run: |
           sleep 20
-          if [ "${{ github.ref_name }}" = "main" ]; then
-            base="https://dotcurt-docs.pages.dev"
-            ok_codes="200"
-          else
-            # slashed branches (docs/org-rename) are invalid hostnames raw;
-            # CF Pages preview aliases sanitize non-alphanumerics to '-'
-            slug=$(printf '%s' "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9]/-/g')
-            base="https://${slug}.dotcurt-docs.pages.dev"
-            ok_codes="200 302"
-          fi
+          base="${DOCS_DEPLOY_URL}"
           for path in / /docs/spec/ /docs/faq/ /docs/status/; do
             code=""
             for attempt in 1 2 3 4 5 6; do
@@ -191,7 +193,7 @@ jobs:
               break
             done
             echo "${path} -> ${code}"
-            echo "$ok_codes" | grep -qw "$code" || { echo "FAIL: ${path} not in [$ok_codes]"; exit 1; }
+            echo "200 302" | grep -qw "$code" || { echo "FAIL: ${path} not in [200 302]"; exit 1; }
           done
 
       - name: No token yet — skip deploy
