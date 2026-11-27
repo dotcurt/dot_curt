@@ -52,7 +52,7 @@ curtis-ai-theme.
 | **curtis-ai-tech** (`porter-app.html`) | embedded web app + docs | R/W | inline copy | `curtis-ai-chat-porter@v` | ⚠️ incidental | ✅ | ✅ | ⚠️ divergent | ❌ | ❌ (see notes) |
 | **tractum** (`tractum@0.5.0`) | Python SDK — signed consensus receipts | R/W | native (own validator) | `tractum@v` | ✅ (rejects) | ✅ | ✅ | n/a (emits dicts) | ❌ | ⚠️ vectors not run — audit pending |
 | **curt-vcon** (`curt-vcon@1.0.1`, npm 2026-11-01) | .curt ⇄ vCon bridge | R/W | **npm `curt-format`** | `curt-vcon@v` | ✅ (via ref) | ✅ (via ref) | n/a (bridge) | ❌ (stdout CLI) | ❌ | ⚠️ vectors not run; 18 tests 2026-11-01 |
-| **curt-convert** (`curt-convert@1.0.2`, npm 2026-11-01) | Claude Code JSONL → .curt | W only | **npm `curt-format`** | `curt-convert@v` | n/a | ✅ (self-check via ref) | ⚠️ writer extras | ✅ (`curtFilename`, bulk collision-safe since 4719816) | ❌ | ⚠️ vectors not run; 30 tests + 1169→1169 corpus self-check (post collision fix) 2026-11-01 |
+| **curt-convert** (`curt-convert@1.0.5`, npm 2026-11-25) | Claude Code JSONL → .curt | W only | **npm `curt-format`** | `curt-convert@v` | n/a | ✅ (self-check via ref) | ⚠️ writer extras | ✅ (`curtFilename`, bulk collision-safe since 4719816) | ❌ | ⚠️ vectors not run; 30 tests + 1169→1169 corpus self-check (post collision fix) 2026-11-01 |
 | **curt-wildchat** (`curt-wildchat@1.0.2`, npm 2026-11-01) | WildChat-1M records → .curt (bulk converter + demos) | W only | **npm `curt-format`** | `curt-wildchat@v` | n/a | ✅ (self-check via ref) | ⚠️ writer extras | ✅ (`curtFilename`; duplicate `conversation_hash` rows collide — see CONFORMANCE-1K finding 1) | ❌ | ⚠️ vectors not run; L3 1K-corpus artifact (1000 records → 995 files, 100% independent re-parse, 1.126× envelope overhead) + 17 tests, 2026-11-01 |
 | **curt-openwebui** (`curt-openwebui-export@1.0.0` + Python pipeline, unpublished) | Open WebUI exporter (TS CLI + draft pipelines filter) | W only | **npm `curt-format`** (TS) / hand-rolled (Python) | both stamped | ✅ TS (via ref) / n/a Py | ✅ TS (self-check) / ⚠️ Py (conv dict only) | ⚠️ writer extras | ✅ both (spec algorithm) | ❌ | ⚠️ vectors not run; TS 15 tests + Py 8 tests + parseCurt cross-check 2026-11-01; pipeline not live-smoked |
 | **curt-busabase** (`curt-busabase@1.0.1`, npm 2026-11-05) | Busabase record review trails → .curt (offline, read-only input) | W only | **npm `curt-format`** | `curt-busabase@v` | n/a | ✅ (self-check via ref) | ⚠️ writer extras | ✅ (`curtFilename`) | ❌ | ✅ **vector run 2026-11-07**: L1 13/13, L2 7/7, artifact 3/3 re-parse byte-stable (first writer to execute the vectors; reproducible via `npm run conformance`) |
@@ -145,8 +145,9 @@ losses) lives in `capabilities.json`.
    `curt-wildchat` entry or the publish-day version bumps — owed a
    follow-up edit.
 7. **In/Out re-verification against npm + GitHub (2026-11-01, partial —
-   API rate limit hit).** npm confirms `curt-format@1.2.0`,
-   `curt-vcon@1.0.1`, `curt-convert@1.0.2`, `curt-wildchat@1.0.2` — the
+   API rate limit hit).** npm confirmed `curt-format@1.2.0`, `curt-vcon@1.0.1`,
+   `curt-wildchat@1.0.2` (curt-convert was 1.0.2 at the time; 1.0.5 since
+   2026-11-25) — the
    In list now matches npm reality. GitHub code search re-confirmed zero
    `curtis-conversation` usage in curtis-crm, curtis-acp, curtis-panel,
    curtis-compliance, curtis-compliance-pro, curtis-console, curtis-os,
